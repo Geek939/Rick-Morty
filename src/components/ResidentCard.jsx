@@ -20,6 +20,7 @@ axios.get(urlResident)
 
     <div>
         <article>
+           
             <header>
                 <img src={resident?.image} alt="" />
                 <div>
