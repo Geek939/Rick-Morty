@@ -5,8 +5,31 @@ import './App.css'
 import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
 import getRandomNumber from './utils/getRandomNumber'
+import Loader from './components/Loader'
 
 function App() {
+
+const [loading, setLoading] = useState(false)
+
+const changeLoading = () =>{
+  setLoading (true)
+  setTimeout(()=> {
+    setLoading (false)
+  },5000)
+}
+
+if (loading){
+  return (<Loader/>)
+}
+else{
+return(
+ <div>
+  <button onClick={()=>changeLoading()} > Cargar pagina
+    
+  </button>
+ </div>
+
+)}
  
 const [location, setLocation] = useState()
   
@@ -35,6 +58,8 @@ const handleSubmit = event =>{
   return (
     <div className="App">
     
+    
+
     <form onSubmit={handleSubmit}>
       <input id='searchValue' type="text" placeholder='Search your dimension' />
       <button type="submit">Search</button>
