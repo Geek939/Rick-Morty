@@ -11,25 +11,14 @@ function App() {
 
 const [loading, setLoading] = useState(false)
 
-const changeLoading = () =>{
-  setLoading (true)
-  setTimeout(()=> {
-    setLoading (false)
-  },5000)
-}
+useEffect (() => {       
+  setLoading(true)
 
-if (loading){
-  return (<Loader/>)
-}
-else{
-return(
- <div>
-  <button onClick={()=>changeLoading()} > Cargar pagina
-    
-  </button>
- </div>
+  setTimeout(() => {
+    setLoading(false)
+  }, 8000);
 
-)}
+},[])
  
 const [location, setLocation] = useState()
   
