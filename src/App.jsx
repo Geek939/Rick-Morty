@@ -50,8 +50,10 @@ const handleSubmit = event =>{
     <section className='flex items-center justify-center'>
     {
         loading? ( 
-          <div className='flex items-center justify-center'>
-          <img className='animate-pulse transition-all' src="https://www.pngkey.com/png/detail/3-36968_rick-and-morty-portal-edible-printing-rick-and.png" alt=""></img>
+          <div className='flex items-center justify-center h-screen w-screen bg-black gap-10 max-md:flex-col max-md:pt-10 max-md:pb-10'>
+           
+          <img className='animate-pulse h-screen' src="src/img/Rick-And-Morty-Wallpaper-PNG-Clipart-Background.png" alt=""></img>
+          <h2 className='text-white text-4xl font-black animate-bounce'>L o a d i n g . . . </h2>
           </div>
         
         ) : ( 
