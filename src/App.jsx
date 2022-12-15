@@ -5,7 +5,7 @@ import './App.css'
 import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
 import getRandomNumber from './utils/getRandomNumber'
-import Loader from './components/Loader'
+
 
 function App() {
 
@@ -47,28 +47,44 @@ const handleSubmit = event =>{
   return (
     <div className="App">
     
-    
+    <section className='flex items-center justify-center'>
+    {
+        loading? ( 
+          <div className='flex items-center justify-center'>
+          <img className='animate-pulse transition-all' src="https://www.pngkey.com/png/detail/3-36968_rick-and-morty-portal-edible-printing-rick-and.png" alt=""></img>
+          </div>
+        
+        ) : ( 
+        
+        <div className='flex items-center justify-center'>
+          <form onSubmit={handleSubmit}>
+            <input id='searchValue' type="text" placeholder='Search your dimension' />
+            <button type="submit">Search</button>
+          </form>
+          
+          <LocationInfo location = {location}/>
+       
+          <section>
+            {
+              location?.residents.map(urlResident => (
+              
+              <ResidentCard key={urlResident} urlResident={urlResident}/>
+              
+              
+              ))
+            }
+          </section>
+        </div>
+          
+      
+      
+        )
+    }
 
-    <form onSubmit={handleSubmit}>
-      <input id='searchValue' type="text" placeholder='Search your dimension' />
-      <button type="submit">Search</button>
-    </form>
-    
-    <LocationInfo location = {location}/>
- 
-    <section>
-      {
-        location?.residents.map(urlResident => (
-        
-        <ResidentCard key={urlResident} urlResident={urlResident}/>
-        
-        
-        ))
-      }
     </section>
+   
+  </div>)
 
-    </div>
-  )
 }
 
 export default App
