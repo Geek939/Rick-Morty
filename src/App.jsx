@@ -7,6 +7,7 @@ import ResidentCard from './components/ResidentCard'
 import getRandomNumber from './utils/getRandomNumber'
 
 
+
 function App() {
 
 const [loading, setLoading] = useState(false)
@@ -52,7 +53,7 @@ const handleSubmit = event =>{
         loading? ( 
           <div className='flex items-center justify-center h-screen w-screen bg-black gap-10 max-md:flex-col max-md:pt-10 max-md:pb-10'>
            
-          <img className='animate-pulse h-screen' src="src/img/fondo.png" alt=""></img>
+          <img className='animate-pulse h-screen' src="/img/fondo.png" alt=""></img>
           <h2 className='text-white text-4xl font-black animate-bounce'>L o a d i n g . . . </h2>
           </div>
         
