@@ -17,7 +17,7 @@ useEffect (() => {
 
   setTimeout(() => {
     setLoading(false)
-  }, 7000);
+  }, 1000);
 
 },[])
  
@@ -59,15 +59,19 @@ const handleSubmit = event =>{
         
         ) : ( 
         
-        <div className='flex items-center justify-center'>
-          <form onSubmit={handleSubmit}>
-            <input id='searchValue' type="text" placeholder='Search your dimension' />
-            <button type="submit">Search</button>
+        <div className='bg-black h-full w-full flex flex-col items-center justify-center'>
+          <img className='h-60 pt-10' src="/img/name.png" alt="Tittle" />
+          <form className='mt-10 mb-10 flex' onSubmit={handleSubmit}>
+            <input className=' bg-zinc-800' id='searchValue' type="text" placeholder='         Search your dimension' />
+            <div className='h-12 w-14 bg-emerald-400 flex items-center justify-center rounded-r-2xl'>
+            <button className='font-bold' type="submit">Search</button>
+            </div>
           </form>
           
+          
           <LocationInfo location = {location}/>
-       
-          <section>
+          
+          <section className='text-white bg-zinc-900 font-medium grid grid-cols-3 gap-7 grid-flow-col'>
             {
               location?.residents.map(urlResident => (
               
