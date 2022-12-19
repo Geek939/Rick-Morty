@@ -19,18 +19,17 @@ axios.get(urlResident)
   return (
 
     <div>
-        <article>
+        <article className='flex items-center justify-center max-md:flex-col'>
            
             <header>
                 <img className='rounde rounded-xl border-emerald-600 border' src={resident?.image} alt="" />
                 <div>
-                    <div></div>
-                    <span className='font-semibold' >{resident?.status}</span>
+                    <span className='font-semibold text-white'>{resident?.status}</span>
                 </div>
             </header>
 
         <section>
-        <h2>{resident?.name}</h2>
+        <h2 className='font font-black text-amber-400'>{resident?.name}</h2>
         <ul>
             <li><span>Specie: </span>{resident?.species}</li>
             <li><span>Origin: </span>{resident?.origin.name}</li>

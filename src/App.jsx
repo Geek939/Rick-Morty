@@ -17,7 +17,7 @@ useEffect (() => {
 
   setTimeout(() => {
     setLoading(false)
-  }, 1000);
+  }, 5000);
 
 },[])
  
@@ -51,19 +51,21 @@ const handleSubmit = event =>{
     <section className='flex items-center justify-center'>
     {
         loading? ( 
-          <div className='flex items-center justify-center h-screen w-screen bg-black gap-10 max-md:flex-col max-md:pt-10 max-md:pb-10'>
+          <div className='flex items-center justify-center h-screen w-screen bg-black gap-10 max-md:flex-col max-md:pt-3 max-md:pb-3'>
            
-          <img className='animate-pulse h-screen' src="/img/fondo.png" alt=""></img>
+          <img className='animate-pulse h-4/6 w-auto' src="/img/fondo.png" alt=""></img>
           <h2 className='text-white text-4xl font-black animate-bounce'>L o a d i n g . . . </h2>
           </div>
         
         ) : ( 
         
         <div className='bg-black h-full w-full flex flex-col items-center justify-center'>
-          <img className='h-60 pt-10 pl-3 pr-3' src="/img/name.png" alt="Tittle" />
+          
+          <h1><img className='h-60 pt-10 pl-3 pr-3' src="/img/name.png" alt="Tittle" /></h1>
+          
           <form className='mt-10 mb-10 flex' onSubmit={handleSubmit}>
-            <input className=' bg-zinc-800' id='searchValue' type="text" placeholder='         Search your dimension' />
-            <div className='h-12 w-14 bg-emerald-400 flex items-center justify-center rounded-r-2xl'>
+            <input className=' bg-zinc-800' id='searchValue' type="text" placeholder='         Search your dimension 1 - 126' />
+            <div className='h-12 w-14 bg-emerald-400 flex items-center justify-center rounded-r-2xl hover:bg-emerald-800'>
             <button className='font-bold' type="submit">Search</button>
             </div>
           </form>
