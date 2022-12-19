@@ -60,7 +60,7 @@ const handleSubmit = event =>{
         ) : ( 
         
         <div className='bg-black h-full w-full flex flex-col items-center justify-center'>
-          <img className='h-60 pt-10' src="/img/name.png" alt="Tittle" />
+          <img className='h-60 pt-10 pl-3 pr-3' src="/img/name.png" alt="Tittle" />
           <form className='mt-10 mb-10 flex' onSubmit={handleSubmit}>
             <input className=' bg-zinc-800' id='searchValue' type="text" placeholder='         Search your dimension' />
             <div className='h-12 w-14 bg-emerald-400 flex items-center justify-center rounded-r-2xl'>
@@ -71,7 +71,7 @@ const handleSubmit = event =>{
           
           <LocationInfo location = {location}/>
           
-          <section className='text-white bg-zinc-900 font-medium grid grid-cols-3 gap-7 grid-flow-col'>
+          <section className='text text-emerald-500 font-normal text-center font-serif grid grid-cols-3 ml-3 mr-3 max-md:grid-cols-2 gap-10'>
             {
               location?.residents.map(urlResident => (
               
