@@ -71,7 +71,7 @@ const handleSubmit = event =>{
           
           <LocationInfo location = {location}/>
           
-          <section className='text text-emerald-500 font-normal text-center font-serif grid grid-cols-3 ml-3 mr-3 max-md:grid-cols-2 gap-10'>
+          <section className='text text-emerald-500 font-normal text-center font-serif grid grid-cols-3 ml-3 mr-3 max-md:grid-cols-2 gap-10 mb-12'>
             {
               location?.residents.map(urlResident => (
               

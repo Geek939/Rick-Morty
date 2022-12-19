@@ -22,10 +22,10 @@ axios.get(urlResident)
         <article>
            
             <header>
-                <img src={resident?.image} alt="" />
+                <img className='rounde rounded-xl border-emerald-600 border' src={resident?.image} alt="" />
                 <div>
-                    <div>CIRCLE</div>
-                    <span>{resident?.status}</span>
+                    <div></div>
+                    <span className='font-semibold' >{resident?.status}</span>
                 </div>
             </header>
 
