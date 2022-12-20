@@ -64,7 +64,7 @@ const handleSubmit = event =>{
           <h1><img className='h-60 pt-10 pl-3 pr-3' src="/img/name.png" alt="Tittle" /></h1>
           
           <form className='mt-10 mb-10 flex' onSubmit={handleSubmit}>
-            <input className=' bg-zinc-800' id='searchValue' type="text" placeholder='         Search your dimension 1 - 126' />
+            <input className=' bg-zinc-800 text-amber-400 font-extrabold' id='searchValue' type="text" placeholder='         Search your dimension 1 - 126' />
             <div className='h-12 w-14 bg-emerald-400 flex items-center justify-center rounded-r-2xl hover:bg-emerald-800'>
             <button className='font-bold' type="submit">Search</button>
             </div>
