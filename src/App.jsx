@@ -59,7 +59,7 @@ const handleSubmit = event =>{
         
         ) : ( 
         
-        <div className='bg-black h-full w-full flex flex-col items-center justify-center'>
+        <div className='bg-black h-full w-full flex flex-col items-center justify-center min-h-screen'>
           
           <h1><img className='h-60 pt-10 pl-3 pr-3' src="/img/name.png" alt="Tittle" /></h1>
           
